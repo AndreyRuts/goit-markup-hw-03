@@ -1,15 +1,15 @@
-/* global styles */
+/* ----------------------------GLOBAL STYLES---------------------------- */
 body {
   font-family: "Roboto", sans-serif;
   color: #434455;
   background-color: #ffffff;
+  margin: 0 auto;
 }
 ul,
 ol {
   list-style-type: none;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 0;
+  padding: 0;
+  margin: 0;
 }
 h1,
 h2,
@@ -21,16 +21,34 @@ p {
   margin-top: 0;
   margin-bottom: 0;
 }
-.container {
-  max-width: 1158px;
-  padding-left: 0;
-  padding-right: 0;
-  margin-left: 0;
-  margin-right: 0;
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+/* ----------------------------------------------------------------------------------------------- */
+/* ----------------------------HEADER SECTION---------------------------- */
+.header-container {
+  display: flex;
+  align-items: center;
+  margin: 24px 0 24px 0;
 }
 
-/* logo header section */
-.logo-header {
+/* LOGO */
+.logo-container {
+  display: inline-block;
+  margin-right: 76px;
+  margin-left: 156px;
+}
+.logo-blue {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 18px;
@@ -40,17 +58,25 @@ p {
   color: #4d5ae5;
   text-decoration: none;
 }
-.logo-header:hover {
+.logo-blue:hover {
   color: #404bbf;
 }
-.logo-header-span {
+.logo-black {
   color: #2e2f42;
 }
-.logo-header-span:hover {
+.logo-black:hover {
   color: #404bbf;
 }
 
-/* nav section .navigation-list {} */
+/* NAVIGATION */
+.navigation-container {
+  display: inline-block;
+  margin-right: 332px;
+}
+.navigation-list {
+  gap: 40px;
+  display: flex;
+}
 .navigation-list-item {
   font-weight: 500;
   font-size: 16px;
@@ -66,9 +92,14 @@ p {
   color: #404bbf;
 }
 
-/* address section .address-list {} */
-.address {
+/* ADDRESS */
+.address-container {
+  display: inline-block;
   font-style: normal;
+}
+.address-list {
+  gap: 40px;
+  display: flex;
 }
 .address-list-item {
   font-weight: 400;
@@ -84,10 +115,12 @@ p {
 .address-list-item:focus {
   color: #404bbf;
 }
+/* ----------------------------------------------------------------------------------------------- */
 
-/* effective solutions section */
+/* ----------------------------BUTTON SECTION---------------------------- */
 .solutions {
   background: #2e2f42;
+  min-height: 600px;
 }
 .solutions-header {
   font-weight: 700;
@@ -96,6 +129,9 @@ p {
   letter-spacing: 0.02em;
   text-align: center;
   color: #fff;
+  max-width: 496px;
+  padding-top: 188px;
+  margin-left: 472px;
 }
 .solutions-button {
   font-family: "Roboto", sans-serif;
@@ -106,6 +142,12 @@ p {
   color: #fff;
   background: #4d5ae5;
   cursor: pointer;
+  width: 169px;
+  height: 56px;
+  border: none;
+  border-radius: 4px;
+  margin-left: 636px;
+  margin-top: 48px;
 }
 .solutions-button:hover {
   background: #404bbf;
@@ -113,8 +155,19 @@ p {
 .solutions-button:focus {
   background: #404bbf;
 }
+/* ----------------------------------------------------------------------------------------------- */
 
-/* our features section .features {} .features-list {} .features-hiden-object {} */
+/* FEATURES SECTION .features {} .features-container {} */
+.features-hiden-object {
+  display: none;
+}
+.features-list {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  min-height: 334px;
+  margin-left: 156px;
+}
 .features-list-header {
   font-weight: 500;
   font-size: 20px;
@@ -123,17 +176,29 @@ p {
   color: #2e2f42;
 }
 .features-list-text {
+  display: block;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  max-width: 264px;
 }
+/* ----------------------------------------------------------------------------------------------- */
 
-/* our team section .team-list-item {} */
+/* TEAM SECTION .team-list-item {} .team-container {} */
 .team {
   background: #f4f4fd;
+  height: 732px;
 }
 .team-list {
+  display: flex;
+  gap: 24px;
+  margin-left: 156px;
+  margin-top: 72px;
+}
+.team-list-card {
   background: #ffffff;
+  border-radius: 0 0 4px 4px;
+  box-shadow: 1px 1px 5px rgba(78, 78, 78, 20%);
 }
 .team-main-header {
   font-weight: 700;
@@ -143,6 +208,7 @@ p {
   text-align: center;
   color: #2e2f42;
   text-transform: capitalize;
+  padding-top: 120px;
 }
 .team-list-header {
   font-weight: 500;
@@ -150,14 +216,28 @@ p {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  padding-top: 32px;
+  text-align: center;
 }
 .team-list-text {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  padding-top: 8px;
+  padding-bottom: 32px;
+  text-align: center;
 }
+/* ----------------------------------------------------------------------------------------------- */
 
-/* portfolio section .portfolio {} .portfolio-list {} .portfolio-list-item {} */
+/* PORTFOLIO SECTION .portfolio {} .portfolio-list {} .portfolio-list-item {} */
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  row-gap: 48px;
+  margin-left: 156px;
+  padding-top: 72px;
+}
 .portfolio-main-header {
   font-weight: 700;
   font-size: 36px;
@@ -166,6 +246,7 @@ p {
   text-align: center;
   color: #2e2f42;
   text-transform: capitalize;
+  padding-top: 120px;
 }
 .portfolio-list-header {
   font-weight: 500;
@@ -173,15 +254,32 @@ p {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  padding-top: 32px;
+  padding-left: 16px;
 }
 .portfolio-list-text {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  padding-top: 8px;
+  padding-bottom: 32px;
+  padding-left: 16px;
 }
-/* footer section */
+.portfolio-card-boarder {
+  border: 1px solid #e7e9fc;
+  border-top: none;
+}
+/* ----------------------------------------------------------------------------------------------- */
+
+/* ----------------------------FOOTER SECTION---------------------------- */
 .footer {
+  margin-top: 120px;
   background: #2e2f42;
+  height: 312px;
+}
+.footer-container {
+  margin-left: 156px;
+  padding-top: 101.5px;
 }
 .logo-footer {
   font-family: "Raleway", sans-serif;
@@ -202,4 +300,7 @@ p {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #f4f4fd;
+  padding-top: 16px;
+  max-width: 264px;
 }
+/* ----------------------------------------------------------------------------------------------- */
